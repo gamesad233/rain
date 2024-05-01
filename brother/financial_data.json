@@ -1,0 +1,5 @@
+[
+    { "year": 2021, "revenue": 1000000, "profit": 500000 },
+    { "year": 2020, "revenue": 800000, "profit": 400000 },
+    { "year": 2019, "revenue": 600000, "profit": 300000 }
+]

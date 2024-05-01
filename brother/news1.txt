@@ -1,0 +1,19 @@
+<style>
+.headline h2 {
+    color: #333;
+}
+
+.headline p {
+    color: #666;
+    margin: 5px 0;
+}
+</style>
+
+            <div class="headline">
+            <h1>Belum ada berita</h2>
+                <h2></h2>
+                <p></p>
+                <p></p>
+                <p></p>
+            </div>
+            <!-- Tambahkan berita lainnya di sini -->

@@ -1,0 +1,15 @@
+[
+    {
+      "title": "Berita Pertama",
+      "image": "images/news1.jpg",
+      "author": "Rihard Hermawan",
+      "content_txt": "news1.txt"
+    },
+    {
+      "title": "Berita Kedua",
+      "image": "images/news2.jpg",
+      "author": "Jane Doe",
+      "content_txt": "news2.txt"
+    }
+  ]
+  
