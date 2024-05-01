@@ -1,0 +1,3 @@
+agama (kristen, islam, hindu, kristen katolik, buddha, konghuchu, Non-Religion)
+status karyawan (Training, Trying 4 years, Karyawan Tetap, DISBAND, RESIGN, SKORSING)
+jabatan (Training, Level 1, Level 2, Level 3, ADHB, Main Coordinator, Main Staff, Main Developer, Direktur)

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searching Result</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* CSS tambahan jika diperlukan */
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Searching Result</h1>
+        <div id="searchResult"></div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Memuat nilai pencarian dari parameter URL saat halaman dimuat
+        $(document).ready(function(){
+            var searchParams = new URLSearchParams(window.location.search);
+            var searchInput = searchParams.get('id');
+            var employeeData = JSON.parse(localStorage.getItem('employeeData'));
+            var filteredEmployees = employeeData.filter(function(employee){
+                return employee.id.toLowerCase().includes(searchInput);
+            });
+            displayEmployees(filteredEmployees);
+        });
+
+        // Fungsi untuk menampilkan karyawan
+        function displayEmployees(employees){
+            var employeeList = '';
+            $.each(employees, function(key, value){
+                employeeList += '<div class="card mb-3">';
+                employeeList += '<div class="card-body">';
+                employeeList += '<h5 class="card-title">' + value.nama_lengkap + '</h5>';
+                employeeList += '<p class="card-text">ID: ' + value.id + '</p>';
+                employeeList += '<p class="card-text">Umur: ' + value.umur + '</p>';
+                employeeList += '<p class="card-text">Agama: ' + value.agama + '</p>';
+                employeeList += '<p class="card-text">Status: ' + value.status_karyawan + '</p>';
+                employeeList += '<p class="card-text">Jabatan: ' + value.jabatan + '</p>';
+                employeeList += '</div></div>';
+            });
+            $('#searchResult').html(employeeList);
+        }
+    </script>
+</body>
+</html>
